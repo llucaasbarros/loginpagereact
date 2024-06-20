@@ -1,12 +1,13 @@
 import React from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { useRef } from 'react'
+import './Navbar.css'
 
 const Navbar = () => {
   const navRef = useRef();
 
   const showNavbar = () => {
-    navRef.current.classicList.toggle("responsive_nav")
+    navRef.current.classList.toggle("responsive_nav")
   }
 
   return (
@@ -16,7 +17,7 @@ const Navbar = () => {
         <a href='#'>Home</a>
         <a href='#'>Sobre</a>
         <a href='#'>Blog</a>
-        <a href='#'>About me</a>
+        <a href='#'>Login</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes/>
         </button>
