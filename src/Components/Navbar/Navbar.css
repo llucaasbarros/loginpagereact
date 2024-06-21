@@ -24,6 +24,10 @@ header {
     color: var(--textColor)
 }
 
+.logo {
+    height: 40px; /* Adjust the size as needed */
+  }
+
 nav a{
     margin: 0 2rem;
     color: var(--textColor);
@@ -58,6 +62,7 @@ header .nav-btn{
         left: 0;
         height: 100%;
         width: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;

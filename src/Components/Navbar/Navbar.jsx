@@ -1,32 +1,32 @@
-import React from 'react'
-import {FaBars, FaTimes} from 'react-icons/fa'
-import { useRef } from 'react'
-import './Navbar.css'
+import React from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { useRef } from 'react';
+import './Navbar.css';
+import LogoBPP from '../../assets/LogoBPP.png'; // Correct import statement
 
 const Navbar = () => {
   const navRef = useRef();
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav")
-  }
+    navRef.current.classList.toggle('responsive_nav');
+  };
 
   return (
     <header>
-      <h3>Logo</h3>
+      <img src={LogoBPP} alt="BoraPraPraia Logo" className="logo" />
       <nav ref={navRef}>
         <a href='#'>Home</a>
         <a href='#'>Sobre</a>
-        <a href='#'>Blog</a>
         <a href='#'>Login</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes/>
+          <FaTimes />
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
-        <FaBars/>
+        <FaBars />
       </button>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
