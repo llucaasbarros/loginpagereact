@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className='App'><Home /></div>
+      <div className='App'><Login/></div>
       <Footer />
     </div>
   );

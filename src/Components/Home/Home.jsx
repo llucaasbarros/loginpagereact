@@ -1,46 +1,46 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import praia1 from 'assets/praia1.jpg';
-import praia2 from 'assets/praia2.jpg';
-import praia3 from 'assets/praia3.jpg';
-
-function Accordeon() {
-  return (
-    <Carousel>
-      <Carousel.Item>
-        <ExampleCarouselImage src={praia1} alt="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage src={praia2} alt="Second slide" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage src={praia3} alt="Third slide" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
-}
+import Navbar from "../Navbar/Navbar";
+import Carousel from "react-bootstrap/Carousel";
 
 const Home = () => {
   return (
-    <div className='home-container'>
-      <Navbar />
-      <Accordeon />
+    <div>
+      
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/praia1.jpg"
+            alt="Primeira imagem"
+          />
+          <Carousel.Caption>
+            <h3>Primeira Imagem</h3>
+            <p>Descrição da primeira imagem.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/praia2.jpg"
+            alt="Segunda imagem"
+          />
+          <Carousel.Caption>
+            <h3>Segunda Imagem</h3>
+            <p>Descrição da segunda imagem.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/praia3.jpg"
+            alt="Terceira imagem"
+          />
+          <Carousel.Caption>
+            <h3>Terceira Imagem</h3>
+            <p>Descrição da terceira imagem.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }
