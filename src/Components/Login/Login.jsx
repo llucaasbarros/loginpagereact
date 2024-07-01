@@ -6,11 +6,18 @@ const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    const handleUsernameChange = (event) => {
+        setUsername(event.target.value);
+    };
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
         alert("Enviando os dados: " + username + " " + password);
     };
-
 
     return (
         <div className='container'>
@@ -21,7 +28,7 @@ const Login = () => {
                         type='email'
                         placeholder='E-mail'
                         value={username}
-                        onChange={(e) => handleUsernameChange(e)}
+                        onChange={handleUsernameChange}
                     />
                     <FaUser className='icon' />
                 </div>
@@ -30,7 +37,7 @@ const Login = () => {
                         type='password'
                         placeholder='Senha'
                         value={password}
-                        onChange={(e) => handlePasswordChange(e)}
+                        onChange={handlePasswordChange}
                     />
                     <FaLock className='icon' />
                 </div>
